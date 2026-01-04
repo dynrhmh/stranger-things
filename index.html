@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stranger Things - About</title>
+    <link rel="icon" href="gambar\logost.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="animations.css">
+    <link rel="stylesheet" type="text/css" href="will.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <img src="gambar\logost.png" alt="Logo">
+        <a href="index.html">About</a>
+        <a href="halaman2.html">Characters</a>
+        <a href="halaman3.html">Gallery</a>
+        <a href="halaman4.html">Form</a>
+      </nav>
+      <nav class="waktu">
+        <script>
+          var waktu = new Date();
+          var jam = waktu.getHours();
+          var menit = waktu.getMinutes();
+          var namaHari = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu");
+          var hari = waktu.getDay();
+          var namaBulan = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+          var bulan = waktu.getMonth();
+          var tgl = waktu.getDate();
+          var tahun = waktu.getFullYear();
+          document.write(namaHari[hari] + ", " + tgl + " " + namaBulan[bulan] + " " + tahun);
+          document.write("<br>");
+          document.write(" " + jam + " : " + menit);
+        </script>
+      </nav>
+      <header>
+        <div class="slider">
+          <img src="gambar\stranger (1).png" class="slide active" alt="Slide 1">
+          <img src="gambar\strangerthings.png" class="slide" alt="Slide 2">
+          <img src="gambar\stranger (3).png" class="slide" alt="Slide 3">
+          <img src="gambar\banner (1).png" class="slide" alt="Slide 4">
+          <img src="gambar\banner (2).png" class="slide" alt="Slide 5">
+
+          <button class="prev" onclick="prevSlide()">❮</button>
+          <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+      </header>
+      <section class="about">
+        <div class="about-text">
+          <img src="gambar\season 1.png" alt="Season 1" style="width: 10; height: auto;">
+          <h2>Stranger Things Season 1</h2>
+          <p>
+            Musim pertama Stranger Things, tayang perdana di Netflix pada 15 Juli 2016. 
+            Berlatar di kota fiksi Hawkins, Indiana pada tahun 1983, cerita ini mengikuti sekelompok teman, seorang ibu yang khawatir, seorang kepala polisi, dan saudara kandung yang tegang 
+            setelah makhluk dari dimensi lain menculik seorang anak laki-laki bernama Will Byers, sementara seorang anak yang melarikan diri dari subjek percobaan berusaha menghindari para penculiknya.
+          </p>
+        </div>
+        <div class="info-box card">
+          <img src="gambar/Musim 1.png" alt="Musim 1" style="width: 20; height: auto;">
+          <div class="info-content">
+            <p><span>Release</span> : 15 Juli 2016</p>
+            <p><span>Number of Episodes</span> : 8</p>
+            <p><span>Native Network</span> : Netflix</p>
+            <p><span>Genre</span> : Sci-Fi, Horor, Misteri</p>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="info-box card">
+          <img src="gambar\musim 2.png" alt="Musim 2">
+          <div class="info-content">
+            <p><span>Release</span> : 27 Oktober 2017</p>
+            <p><span>Number of Episodes</span> : 9</p>
+            <p><span>Native Network</span> : Netflix</p>
+            <p><span>Genre</span> : Sci-Fi, Horor, Misteri</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <img src="gambar\s2.png" alt="Season 2">
+          <h2>Stranger Things Season 2</h2>
+          <p>
+            Berlatar di kota Hawkins pada musim gugur tahun 1984, cerita berlanjut ketika kekuatan supernatural sekali lagi mulai memengaruhi kota tersebut. Meskipun musim ini terutama 
+            menampilkan kembali para pemeran dan karakter inti dari musim pertama, beberapa karakter baru diperkenalkan: Max Mayfield yang tomboy dan kakak tirinya, Billy Hargrove, seorang gadis 
+            bernama Kali Prasad yang terhubung dengan Hawkins Lab, manajer RadioShack dan pacar Joyce, Bob Newby, Kepala Hawkins Lab yang baru, Dr. Sam Owens, dan mantan jurnalis yang beralih menjadi 
+            ahli teori konspirasi, Murray Bauman.
+          </p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about-text">
+          <img src="gambar\s3.png" alt="Season 3">
+          <h2>Stranger Things Season 3</h2>
+          <p>
+            Musim ini memiliki lompatan waktu seperti musim sebelumnya, yang berlatar musim panas tahun 1985. Plotnya berpusat pada rahasia 
+            yang tersembunyi di dalam Starcourt Mall baru yang megah di Hawkins, sementara Mind Flayer merencanakan untuk mengalahkan Eleven dan menguasai dunia.
+            Musim ini memperkenalkan rekan kerja Steve, Robin Buckley, penjaga pantai Heather Holloway, reporter Hawkins Post Tom Holloway dan Bruce Lowe, serta ilmuwan Soviet Dr. 
+            Alexei dan pembunuh bayaran Soviet Grigori, dan pacar Dustin, Suzie Bingham.
+          </p>
+        </div>
+        <div class="info-box card">
+          <img src="gambar\musim 3.png" alt="Musim 3" style="width: 20; height: auto;">
+          <div class="info-content">
+            <p><span>Release</span> : 4 Juli 2019</p>
+            <p><span>Number of Episodes</span> : 8</p>
+            <p><span>Native Network</span> : Netflix</p>
+            <p><span>Genre</span> : Sci-Fi, Horor, Misteri</p>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="info-box card">
+          <img src="gambar/Musim 4.png" alt="Musim 4" style="width: 20; height: auto;">
+          <div class="info-content">
+            <p><span>Release</span> : 27 Mei - 1 Juli 2022</p>
+            <p><span>Number of Episodes</span> : 9</p>
+            <p><span>Native Network</span> : Netflix</p>
+            <p><span>Genre</span> : Sci-Fi, Horor, Misteri</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <img src="gambar\s4.png" alt="Season 4">
+          <h2>Stranger Things Season 4</h2>
+          <p>
+            Plotline pertama terjadi di Hawkins, di mana beberapa remaja dibunuh secara misterius. Karakter termasuk, Dustin Henderson, Max Mayfield, 
+            Lucas dan Erica Sinclair, Steve Harrington, Nancy Wheeler, Robin Buckley dan Eddie Munson, pemimpin Hellfire Club; grup Dungeons & Dragons yang 
+            dimasuki Dustin dan teman-temannya. Eddie menjadi tersangka pembunuhan utama dan diburu oleh Jason Carver dan anggota tim bola basket, yang percaya 
+            bahwa Eddie membunuh pacar Jason, Chrissy Cunningham, menggunakan kekuatan setan. Dustin dan teman-temannya menyelidiki dan menemukan bahwa pembunuhan itu 
+            dilakukan oleh makhluk kuat yang tinggal di Upside Down, yang mereka juluki "Vecna".
+          </p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about-text">
+          <img src="gambar\S5.png" alt="Season 5" style="width: 10; height: auto;">
+          <h2>Stranger Things Season 5</h2>
+          <p>
+            Setelah peristiwa musim keempat, pada musim gugur tahun 1987, kelompok tersebut berusaha menemukan dan membunuh Vecna ​​setelah terbukanya celah di seluruh Hawkins. 
+            Misi mereka menjadi lebih rumit ketika militer tiba di kota dan mulai memburu Eleven. Saat peringatan hilangnya Will Byers semakin dekat, kelompok tersebut harus bersatu untuk 
+            pertempuran terakhir melawan ancaman mematikan yang baru.
+          </p>
+        </div>
+        <div class="info-box card">
+          <img src="gambar\s5 (4).png" alt="Musim 5" style="width: 20; height: auto;">
+          <div class="info-content">
+            <p><span>Release</span> : 15 Juli 2016</p>
+            <p><span>Number of Episodes</span> : 8</p>
+            <p><span>Native Network</span> : Netflix</p>
+            <p><span>Genre</span> : Sci-Fi, Horor, Misteri</p>
+          </div>
+        </div>
+      </section>
+      <div class="woon">
+        <img src="gambar\logo.png" alt="Logo">
+        <h1>PRESENTED BY</h1>
+        <img src="gambar\Netflix Entertainmen - Diedit.png" alt="Netflix">
+      </div>
+      <div class="eleven">
+        <a href="https://x.com/dyanrhmh11"><img src="gambar\logo x.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/dyanst_249?igsh=dm1pNXJ2cThjNzFv"><img src="gambar\logo instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@dynstyrhmh?_r=1&_t=ZS-92gDhWOJkbh"><img src="gambar\logo tiktok.png" alt="TikTok"></a>
+      </div>
+      <footer>
+        © 2025 Dian Siti Rohimah - 251011700962 - 01SIFP014
+      </footer>
+    </div>
+    <script src="woon.js"></script>
+  </body>
+</html>

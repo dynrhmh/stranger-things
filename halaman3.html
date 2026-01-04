@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stranger Things - Gallery</title>
+    <link rel="icon" href="gambar\logost.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="animations.css">
+    <link rel="stylesheet" type="text/css" href="mike.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <img src="gambar\logost.png" alt="Logo">
+       <a href="index.html">About</a>
+        <a href="halaman2.html">Characters</a>
+        <a href="halaman3.html">Gallery</a>
+        <a href="halaman4.html">Form</a>
+      </nav>
+      
+      <nav class="waktu">
+        <script>
+          var waktu = new Date();
+          var jam = waktu.getHours();
+          var menit = waktu.getMinutes();
+          var namaHari = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu");
+          var hari = waktu.getDay();
+          var namaBulan = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+          var bulan = waktu.getMonth();
+          var tgl = waktu.getDate();
+          var tahun = waktu.getFullYear();
+          document.write(namaHari[hari] + ", " + tgl + " " + namaBulan[bulan] + " " + tahun);
+          document.write("<br>");
+          document.write(" " + jam + " : " + menit);
+        </script>
+      </nav>
+      <header>
+        <div class="slider">
+          <img src="gambar\stranger (1).png" class="slide active" alt="Slide 1">
+          <img src="gambar\strangerthings.png" class="slide" alt="Slide 2">
+          <img src="gambar\stranger (3).png" class="slide" alt="Slide 3">
+          <img src="gambar\banner (1).png" class="slide" alt="Slide 4">
+          <img src="gambar\banner (2).png" class="slide" alt="Slide 5">
+
+          <button class="prev" onclick="prevSlide()">❮</button>
+          <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+        <script>
+          let index = 0;
+          const slides = document.querySelectorAll(".slide");
+
+          function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[i].classList.add("active");
+          }
+
+          setInterval(() => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+          }, 3000);
+          
+          let slider = document.querySelector(".slider");
+          let autoSlide = setInterval(nextSlide, 3000);
+
+          slider.addEventListener("mouseover", () => clearInterval(autoSlide));
+          slider.addEventListener("mouseout", () => {
+            autoSlide = setInterval(nextSlide, 3000);
+          });
+        </script>
+      </header>
+      <section class="netflix-episodes">
+        <div class="header">
+          <h2>Season 1</h2>
+        </div>
+        <div class="slider-wrapper">
+          <button class="arrow left">❮</button>
+          <div class="episode-row">
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\will byers.png" alt="Episode 1">
+                  <span class="time">49m</span>
+                </div>
+                <h3>Episode 1: The Vanishing of Will Byers</h3>
+                <p>
+                  Dalam perjalanan pulang dari rumah temannya, Will muda melihat sosok mengerikan. Tak jauh dari sana, sebuah rahasia jahat terselundup di dalam lab pemerintah.
+                </p>
+              </div>
+            </div>
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\friends.png" alt="Episode 2">
+                  <span class="time">56m</span>
+                </div>
+                <h3>Episode 2: The Weirdo on Maple Street</h3>
+                <p>
+                  Lucas, Mike, dan Dustin mencoba mengajak bicara gadis yang mereka temui di hutan. Hopper menanyai Joyce yang gelisah tentang panggilan telepon yang meresahkan.
+                </p>
+              </div>
+            </div>
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\download.png" alt="Episode 3">
+                  <span class="time">52m</span>
+                </div>
+                <h3>Episode 3: Holly, Jolly</h3>
+                <p>
+                  Nancy yang semakin cemas mencari Barb dan mengetahui apa yang dilakukan Jonathan. Joyce yakin bahwa Will mencoba berbicara dengannya.
+                </p>
+              </div>
+            </div>
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\eps4 (2).png" alt="Episode 4">
+                  <span class="time">51m</span>
+                </div>
+                <h3>Episode 4: The Body</h3>
+                <p>
+                  Menolak memercayai bahwa Will telah tewas, Joyce mencoba menghubungi putranya. Anak-anak merombak penampilan Eleven. Nancy dan Jonathan bersekutu.
+                </p>
+              </div>
+            </div>
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\hopper (2).png" alt="Episode 5">
+                  <span class="time">53m</span>
+                </div>
+                <h3>Episode 5: The Flea and the Acrobat</h3>
+                <p>
+                  Hopper membobol lab, sementara Nancy dan Jonathan menghadapi kekuatan yang menculik Will. Anak-anak menanyakan cara memasuki dimensi lain kepada Tn. Clarke.
+                </p>
+              </div>
+            </div>
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\Nency.png" alt="Episode 6">
+                  <span class="time">47m</span>
+                </div>
+                <h3>Episode 6: The Monster</h3>
+                <p>
+                  Jonathan panik dan mencari-cari Nancy dalam kegelapan, yang juga sedang dicari Steve. Hopper dan Joyce mengungkap kebenaran tentang eksperimen di lab.
+                </p>
+              </div>
+            </div>
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\el.png" alt="Episode 7">
+                  <span class="time">43m</span>
+                </div>
+                <h3>Episode 7: The Bathtub</h3>
+                <p>
+                  Lucas memperingatkan bahwa "orang-orang jahat datang". Nancy dan Jonathan menunjukkan foto dari kamera Jonathan pada polisi.
+                </p>
+              </div>
+            </div>
+
+            <div class="episode-card">
+              <div class="card">
+                <div class="image">
+                  <img src="gambar\Jonathan (2).png" alt="Episode 8">
+                  <span class="time">55m</span>
+                </div>
+                <h3>Episode 8: The Upside Down</h3>
+                <p>
+                  Dr. Brenner menahan Hopper dan Joyce untuk diinterogasi, sedangkan anak-anak menunggu bersama Eleven di gym. Di rumah Will, Nancy dan Jonathan bersiap untuk bertarung.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="arrow right">❯</button>
+        </div>
+      </section>
+      <section class="netflix-episodes">
+        <div class="header">
+    <h2>Season 2</h2>
+
+  </div>
+  <div class="slider-wrapper">
+
+  <div class="slider-wrapper">
+  <button class="arrow left">❮</button>
+
+  <div class="episode-row">
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\madmax.png">
+        <span class="time">49m</span>
+      </div>
+  
+        <h3>Episode 1: MADMAX</h3>
+        <p>
+          Saat kota bersiap menyambut Halloween, rival peraih skor tinggi mengguncang semuanya di arena bermain, dan Hopper yang skeptis menyelidiki ladang labu yang membusuk.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\trick or treat.png">
+        <span class="time">56m</span>
+      </div>
+        <h3> Episode 2: Trick or Treat, Freak</h3>
+        <p>
+          Setelah Will menyaksikan sesuatu yang mengerikan di malam Halloween, Mike penasaran apakah Eleven masih berada di luar sana. Nancy bergumul dengan kebenaran tentang Barb.
+        </p>
+      </div>
+    </div>
+
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\the pollywog.png">
+        <span class="time">51m</span>
+      </div>
+  
+        <h3>Episode 3: The Pollywog</h3>
+        <p>
+         Dustin mengadopsi piaraan baru yang aneh, dan Eleven makin tak sabar. Bob yang berniat baik mendesak Will untuk mengalahkan ketakutannya.
+         
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Will the Wise.png">
+        <span class="time">47m</span>
+      </div>
+        <h3> Episode 4: Will the Wise</h3>
+        <p>
+         Will yang sakit berterus terang kepada Joyce dengan akibat yang meresahkan. Saat Hopper menggali kebenaran, Eleven menyingkap temuan mengejutkan.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Dig Dug.png">
+        <span class="time">59m</span>
+      </div>
+        <h3> Episode 5: Dig Dug</h3>
+        <p>
+          Nancy dan Jonathan bertukar teori konspirasi dengan sekutu baru, sementara Eleven mencari seseorang dari masa lalunya. "Bob the Brain" mengatasi masalah sulit.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\The Spy.png">
+        <span class="time">52m</span>
+      </div>
+        <h3>Episode 6: The Spy</h3>
+        <p>
+          Hubungan Will dengan monster bayangan kian kokoh, tetapi tak seorang pun tahu cara menghentikannya. Di tempat lain, Dustin dan Steve menjalin ikatan tak biasa.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\The Lost Sister.png">
+        <span class="time">46m</span>
+      </div>
+        <h3>Episode 7: The Lost Sister</h3>
+        <p>
+          Penglihatan supernatural membawa Eleven kepada gerombolan orang buangan dan gadis pemarah dengan masa lalu yang misterius.
+          <br>
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\The Mind Flayer.png">
+        <span class="time">48m</span>
+      </div>
+        <h3> Episode 8: The Mind Flayer</h3>
+        <p>
+          Pahlawan tak terduga mengulurkan bantuan saat perkembangan mematikan membuat Hawkins Lab terkunci total, sehingga Will dan beberapa orang lain terjebak di dalamnya.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\The Gate.png">
+        <span class="time">1j 3m</span>
+      </div>
+        <h3>Episode 9: The Gate</h3>
+        <p>
+          Eleven berencana menyelesaikan apa yang telah ia mulai, sementara para korban selamat semakin mendesak kekuatan mengerikan yang menawan Will.
+        </p>
+      </div>
+    </div>
+
+ <button class="arrow right" >❯</button>
+
+</div>
+</section>
+<section class="netflix-episodes">
+ <div class="header">
+    <h2>Season 3</h2>
+
+  </div>
+  <div class="slider-wrapper">
+
+  <div class="slider-wrapper">
+  <button class="arrow left">❮</button>
+
+  <div class="episode-row">
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Suzie, Kau Dengar.png">
+        <span class="time">51m</span>
+      </div>
+  
+        <h3> Episode 1: Suzie, Kau Dengar?</h3>
+        <p>
+          Musim panas membawa banyak tugas baru dan benih-benih asmara. Namun, suasana berubah saat radio Dustin menangkap siaran berbahasa Rusia, dan Will merasa ada yang janggal.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Tikus Mal.png">
+        <span class="time">51m</span>
+      </div>
+        <h3>Episode 2: Tikus Malk</h3>
+        <p>
+          Nancy dan Jonathan mengikuti sebuah petunjuk. Steve dan Robin terlibat misi rahasia, sedangkan Max dan Eleven pergi berbelanja. Billy melihat penampakan yang meresahkan.
+        </p>
+      </div>
+    </div>
+
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Kasus Hilangnya Penjaga Kolam Renang.png">
+        <span class="time">50m</span>
+      </div>
+  
+        <h3> Episode 3: Kasus Hilangnya Penjaga Kolam Renang</h3>
+        <p>
+         Sementara El dan Max mencari Billy, Will mendeklarasikan hari tanpa gadis. Steve dan Dustin melakukan pengintaian. Joyce dan Hopper kembali ke Laboratorium Hawkins.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Ujian Sauna.png">
+        <span class="time">53m</span>
+      </div>
+        <h3> Episode 4: Ujian Sauna</h3>
+        <p>
+        Sinyal bahaya mempersatukan geng ini kembali guna menghadapi iblis yang tak asing. Karen mendesak Nancy untuk melanjutkan penyelidikan, dan Robin menemukan peta berguna.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Pasukan Flayer.png">
+        <span class="time">52m</span>
+      </div>
+        <h3> Episode 5: Pasukan Flayer</h3>
+        <p>
+          Kejutan misterius tersembunyi di dalam sebuah peternakan tua dan jauh di bawah Starcourt Mall. Sementara itu, Mind Flayer sedang mengumpulkan kekuatan.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Senjata.png">
+        <span class="time">1j</span>
+      </div>
+        <h3> Episode 6: Senjata</h3>
+        <p>
+          Dr. Alexei mengungkap apa yang sejauh ini dibangun orang-orang Rusia. Eleven melihat di mana Billy berada selama ini. Dustin dan Erica melakukan penyelamatan nekat.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Gigitan.png">
+        <span class="time">56m</span>
+      </div>
+        <h3>Episode 7: Gigitan</h3>
+        <p>
+          Saat hampir kehabisan waktu dan seorang pembunuh makin dekat, kru Hopper bergegas kembali ke Hawkins. Di sana, El dan anak-anak lain bersiap untuk perang.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Pertempuran Starcourt.png">
+        <span class="time">48m</span>
+      </div>
+        <h3>Episode 8: Pertempuran Starcourt</h3>
+        <p>
+          Teror menguasai pujasera saat Mind Flayer datang untuk membunuh. Namun, jauh di dalam gelapnya bawah tanah, masa depan dunia dipertaruhkan.
+        </p>
+      </div>
+    </div>
+
+  </div>
+<button class="arrow right" >❯</button>
+
+</div>
+</section>
+<section class="netflix-episodes">
+ <div class="header">
+    <h2>Season 4</h2>
+
+  </div>
+  <div class="slider-wrapper">
+
+  <div class="slider-wrapper">
+  <button class="arrow left">❮</button>
+
+  <div class="episode-row">
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Klub Hellfire.png">
+        <span class="time">1j 18m</span>
+      </div>
+  
+        <h3>Episode 1: Klub Hellfire</h3>
+        <p>
+         El dirundung di sekolah barunya, tetapi ia tak bisa melawan. Joyce membuka paket misterius. Di Hawkins, seorang pemain tangguh mengguncang malam D&D.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Kutukan Vecna.png">
+        <span class="time">1j 18m</span>
+      </div>
+        <h3>Episode 2: Kutukan Vecna</h3>
+        <p>
+          Mike naik pesawat ke California—dan sesosok mayat menggemparkan Hawkins. Nancy mencari petunjuk. Eddie yang syok menceritakan apa yang dilihatnya kepada teman-teman.
+        </p>
+      </div>
+    </div>
+
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Monster dan Pahlawan Super.png">
+        <span class="time">1j 5m</span>
+      </div>
+  
+        <h3> Episode 3: Monster dan Pahlawan Super</h3>
+        <p>
+        Murray dan Joyce terbang ke Alaska, sedang El menghadapi konsekuensi serius. Robin & Nancy menyelidiki sosok-sosok jahat di Hawkins. Dr. Owens menyampaikan berita buruk.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Billy Sayang.png">
+        <span class="time">1j 19m</span>
+      </div>
+        <h3> Episode 4: Billy Sayang</h3>
+        <p>
+         Max berada dalam bahaya besar dan kehabisan waktu. Seorang pasien di Rumah Sakit Jiwa Pennhurst kedatangan beberapa tamu. Sementara itu, di Rusia, Hopper bekerja keras.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Proyek Nina.png">
+        <span class="time">1j 17m</span>
+      </div>
+        <h3> Episode 5: Proyek Nina</h3>
+        <p>
+         Owens membawa El ke Nevada, tempat El dipaksa menghadapi masa lalunya. Sementara itu, anak-anak Hawkins mencari petunjuk di rumah reyot. Vecna membunuh lagi.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Penyelaman.png">
+        <span class="time">1j 15m</span>
+      </div>
+        <h3> Episode 6: Penyelaman</h3>
+        <p>
+          Misi penyelamatan yang berbahaya berlangsung di balik Tirai Besi. Kru di California meminta bantuan dari seorang peretas. Steve rela berkorban demi tim.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Pembantaian di Laboratorium Hawkins.png">
+        <span class="time">1j 41m</span>
+      </div>
+        <h3> Episode 7: Pembantaian di Laboratorium Hawkins</h3>
+        <p>
+         Saat Hopper bersiap melawan monster, Dustin menganalisis berbagai niat Vecna dan memecahkan kode sebuah pesan dari dunia lain. El menemukan kekuatan dari kenangan lama.
+          <br>
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Papa.png">
+        <span class="time">1j 27m</span>
+      </div>
+        <h3> Episode 8: Papa</h3>
+        <p>
+        Nancy mendapat penglihatan yang membuatnya waspada, sedang El lulus dari suatu ujian penting. Di Hawkins, geng mengumpulkan perbekalan dan bersiap menghadapi pertempuran.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Menggendong.png">
+        <span class="time">2j 22m</span>
+      </div>
+        <h3>Episode 9: Menggendong</h3>
+        <p>
+          Berbekal ketulusan hati untuk berkorban dan hentakan musik metal, para pahlawan berjuang dari setiap sudut medan perang demi menyelamatkan Hawkins serta seluruh dunia.
+        </p>
+      </div>
+    </div>
+  <button class="arrow right" >❯</button>
+</div>
+</section>
+<section class="netflix-episodes">
+ <div class="header">
+    <h2>Season 5</h2>
+
+  </div>
+  <div class="slider-wrapper">
+  <button class="arrow left">❮</button>
+
+  <div class="episode-row">
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Penyusupan.png">
+        <span class="time">1j 11m</span>
+      </div>
+  
+        <h3>Episode 1:  Penyusupan</h3>
+        <p>
+          November 1987. Kelompok tersebut menghindari militer untuk mencari Vecna dengan menyisir Upside Down, tanpa menyadari ancaman yang mengintai di dekat mereka.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Yang Menghilang, Holly Wheeler.png">
+        <span class="time">57m</span>
+      </div>
+        <h3>Episode 2: Yang Menghilang, Holly Wheeler</h3>
+        <p>
+          Setelah serangan kejam di rumah Wheeler, rahasia Mike dan Nancy terancam terbongkar. Sementara itu, El dan Hopper memulai misi penyelamatan.
+        </p>
+      </div>
+    </div>
+
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Jebakan Turnbow.png">
+        <span class="time">1j 9m</span>
+      </div>
+  
+        <h3>Episode 3: Jebakan Turnbow</h3>
+        <p>
+         Will mendapatkan penglihatan unik tentang langkah Vecna selanjutnya, yang memberi kru kesempatan untuk memasang jebakan. Holly menjelajahi lingkungan barunya.
+         
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Penyihir.png">
+        <span class="time">1j 26m</span>
+      </div>
+        <h3> Episode 4:  Penyihir</h3>
+        <p>
+        Militer memperketat kendalinya di kota. Mike, Lucas, dan Robin menyusun rencana pelarian yang nekat. El berhadapan langsung dengan musuh.
+        </p>
+      </div>
+    </div>
+    
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Sengatan Listrik Kehidupan.png">
+        <span class="time">1j 8m</span>
+      </div>
+        <h3> Episode 5: Sengatan Listrik Kehidupan</h3>
+        <p>
+          Geng membuat rencana luar biasa agar Will dapat terhubung kembali ke pikiran satu kesatuan. Ketegangan muncul selama pencarian Lab Hawkins di Upside Down.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Kabur dari Camazotz.png">
+        <span class="time">1j 15m</span>
+      </div>
+        <h3> Episode 6:  Kabur dari Camazotz</h3>
+        <p>
+          Holly dan Max berjuang keluar dari pikiran Vecna, El harus mencari cara masuk ke pikiran Will. Joyce dihantui rasa bersalah. Jonathan dan Nancy menghadapi momen penentu.
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Jembatan.png">
+        <span class="time">1j 6m</span>
+      </div>
+        <h3>Episode 7: Jembatan</h3>
+        <p>
+          Di hari peringatan menghilangnya Will, kelompok ini bertemu kembali untuk bersiap menghadapi pertarungan yang memiliki berbagai implikasi yang dapat mengubah dunia.
+        </p>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="card">
+      <div class="image">
+        <img src="gambar\Rightside Up.png">
+        <span class="time">2j 8m</span>
+      </div>
+        <h3> Episode 8: Rightside Up</h3>
+        <p>
+          Saat Vecna bersiap untuk menghancurkan dunia yang kita kenal, tim pahlawan ini harus mempertaruhkan segalanya demi mengalahkan Vecna untuk selamanya.
+        </p>
+      </div>
+    </div> 
+   <button class="arrow right" >❯</button>
+</div>
+</section>
+      <div class="woon">
+        <img src="gambar\logo.png" alt="Logo">
+        <h1>PRESENTED BY</h1>
+        <img src="gambar\Netflix Entertainmen - Diedit.png" alt="Netflix">
+      </div>
+
+      <div class="eleven">
+        <a href="https://x.com/dyanrhmh11"><img src="gambar\logo x.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/dyanst_249?igsh=dm1pNXJ2cThjNzFv"><img src="gambar\logo instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@dynstyrhmh?_r=1&_t=ZS-92gDhWOJkbh"><img src="gambar\logo tiktok.png" alt="TikTok"></a>
+      </div>
+      <footer>
+        © 2025 Dian Siti Rohimah - 251011700962 - 01SIFP014
+      </footer>
+    </div>
+    <script src="eleven.js"></script>
+</body>
+</html>

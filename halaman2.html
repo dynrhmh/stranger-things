@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stranger Things - Characters</title>
+    <link rel="icon" href="gambar\logost.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="animations.css">
+    <link rel="stylesheet" type="text/css" href="max.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <img src="gambar\logost.png" alt="Logo">
+        <a href="index.html">About</a>
+        <a href="halaman2.html">Characters</a>
+        <a href="halaman3.html">Gallery</a>
+        <a href="halaman4.html">Form</a>
+      </nav>
+      <nav class="waktu">
+        <script>
+          var waktu = new Date();
+          var jam = waktu.getHours();
+          var menit = waktu.getMinutes();
+          var namaHari = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu");
+          var hari = waktu.getDay();
+          var namaBulan = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+          var bulan = waktu.getMonth();
+          var tgl = waktu.getDate();
+          var tahun = waktu.getFullYear();
+          document.write(namaHari[hari] + ", " + tgl + " " + namaBulan[bulan] + " " + tahun);
+          document.write("<br>");
+          document.write(" " + jam + " : " + menit);
+        </script>
+      </nav>
+      <header>
+        <div class="slider">
+          <img src="gambar\stranger (1).png" class="slide active" alt="Slide 1">
+          <img src="gambar\strangerthings.png" class="slide" alt="Slide 2">
+          <img src="gambar\stranger (3).png" class="slide" alt="Slide 3">
+          <img src="gambar\banner (1).png" class="slide" alt="Slide 4">
+          <img src="gambar\banner (2).png" class="slide" alt="Slide 5">
+
+          <button class="prev" onclick="prevSlide()">❮</button>
+          <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+        <script>
+          let index = 0;
+          const slides = document.querySelectorAll(".slide");
+
+          function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[i].classList.add("active");
+          }
+
+          setInterval(() => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+          }, 3000);
+          
+          let slider = document.querySelector(".slider");
+          let autoSlide = setInterval(nextSlide, 3000);
+
+          slider.addEventListener("mouseover", () => clearInterval(autoSlide));
+          slider.addEventListener("mouseout", () => {
+            autoSlide = setInterval(nextSlide, 3000);
+          });
+        </script>
+      </header>
+      <h1 class="judul">CHARACTERS</h1>
+      <div class="character-grid">
+        <div class="character-card">
+          <img src="gambar\will (2).png" alt="Will Byers">
+          <div class="character-info">
+            <h3>Will Byers</h3>
+            <p>Noah Schnapp</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Mike Wheeler.png" alt="Mike Wheeler">
+          <div class="character-info">
+            <h3>Mike Wheeler</h3>
+            <p>Finn Wolfhard</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Eleven.png" alt="Eleven">
+          <div class="character-info">
+            <h3>Eleven</h3>
+            <p>Millie Bobby Brown</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\𝒖𝒔𝒕𝒊𝒏 𝑯𝒆𝒏𝒅𝒆𝒓𝒔𝒐.png" alt="Dustin Henderson">
+          <div class="character-info">
+            <h3>Dustin Henderson</h3>
+            <p>Gaten Matarazzo</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Lucas Sinclair.png" alt="Lucas Sinclair">
+          <div class="character-info">
+            <h3>Lucas Sinclair</h3>
+            <p>Caleb McLaughlin</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\joyce byers.png" alt="Joyce Byers">
+          <div class="character-info">
+            <h3>Joyce Byers</h3>
+            <p>Winona Ryder</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\strangerthings (2).png" alt="Max Mayfield">
+          <div class="character-info">
+            <h3>Max Mayfield</h3>
+            <p>Sadie Sink</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Hopper.png" alt="Jim Hopper">
+          <div class="character-info">
+            <h3>Jim Hopper</h3>
+            <p>David Harbour</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Nancy Wheeler.png" alt="Nancy Wheeler">
+          <div class="character-info">
+            <h3>Nancy Wheeler</h3>
+            <p>Natalia Dyer</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Jonathan.png" alt="Jonathan Byers">
+          <div class="character-info">
+            <h3>Jonathan Byers</h3>
+            <p>Charlie Heaton</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Steve.png" alt="Steve Harrington">
+          <div class="character-info">
+            <h3>Steve Harrington</h3>
+            <p>Joe Keery</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Robin Buckley.png" alt="Robin Buckley">
+          <div class="character-info">
+            <h3>Robin Buckley</h3>
+            <p>Maya Hawke</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Bob.png" alt="Bob Newby">
+          <div class="character-info">
+            <h3>Bob Newby</h3>
+            <p>Sean Astin</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\strenger things.png" alt="Erica Sinclair">
+          <div class="character-info">
+            <h3>Erica Sinclair</h3>
+            <p>Priah Ferguson</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Kali.png" alt="Kali Prasad">
+          <div class="character-info">
+            <h3>Kali Prasad</h3>
+            <p>Linnea Berthelsen</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\billy.png" alt="Billy Hargrove">
+          <div class="character-info">
+            <h3>Billy Hargrove</h3>
+            <p>Dacre Montgomery</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Eddie Munson.png" alt="Eddie Munson">
+          <div class="character-info">
+            <h3>Eddie Munson</h3>
+            <p>Joseph Quinn</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Holly Wheeler.png" alt="Holly Wheeler">
+          <div class="character-info">
+            <h3>Holly Wheeler</h3>
+            <p>Nell Fisher</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Dr. Sam Owens.png" alt="Dr. Sam Owens">
+          <div class="character-info">
+            <h3>Dr. Sam Owens</h3>
+            <p>Paul Reiser</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Dr. Alexei .png" alt="Dr. Alexei">
+          <div class="character-info">
+            <h3>Dr. Alexei</h3>
+            <p>Alec Utgoff</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\001.png" alt="Vecna">
+          <div class="character-info">
+            <h3>Vecna</h3>
+            <p>Jamie Campbell Bower</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Precious.png" alt="Suzie Bingham">
+          <div class="character-info">
+            <h3>Suzie Bingham</h3>
+            <p>Gabriella Pizzolo</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Demogorgon .png" alt="Demogorgon">
+          <div class="character-info">
+            <h3>Demogorgon</h3>
+            <p>Mark Steger</p>
+          </div>
+        </div>
+        <div class="character-card">
+          <img src="gambar\Karen Wheeler.png" alt="Karen Wheeler">
+          <div class="character-info">
+            <h3>Karen Wheeler</h3>
+            <p>Cara Buono</p>
+          </div>
+        </div>
+      </div>
+      <div class="woon">
+        <img src="gambar\logo.png" alt="Logo">
+        <h1>PRESENTED BY</h1>
+        <img src="gambar\Netflix Entertainmen - Diedit.png" alt="Netflix">
+      </div>
+      <div class="eleven">
+        <a href="https://x.com/dyanrhmh11"><img src="gambar\logo x.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/dyanst_249?igsh=dm1pNXJ2cThjNzFv"><img src="gambar\logo instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@dynstyrhmh?_r=1&_t=ZS-92gDhWOJkbh"><img src="gambar\logo tiktok.png" alt="TikTok"></a>
+      </div>
+      <footer>
+        © 2025 Dian Siti Rohimah - 251011700962 - 01SIFP014
+      </footer>
+    </div>
+  </body>
+</html>
